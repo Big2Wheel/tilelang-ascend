@@ -27,8 +27,7 @@ INT32 = "int32"
     workspace_idx=[5],
     pass_configs={
         tilelang.PassConfigKey.TL_ASCEND_AUTO_SYNC: True,
-        # This kernel provides its own cross-core Set/Wait protocol.
-        tilelang.PassConfigKey.TL_ASCEND_AUTO_CV_SYNC: False,
+        tilelang.PassConfigKey.TL_ASCEND_AUTO_CV_SYNC: False,  # Handwritten workspace Set/Wait.
         tilelang.PassConfigKey.TIR_MERGE_STATIC_SMEM: True,
         tilelang.PassConfigKey.TL_ASCEND_MEMORY_PLANNING: True,
     },
